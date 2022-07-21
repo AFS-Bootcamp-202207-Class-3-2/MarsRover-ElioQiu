@@ -53,4 +53,16 @@ class MarsRoverTest {
         assertEquals(2, marsRover.getyIndex());
         assertEquals(Constant.S, marsRover.getDirection());
     }
+
+    @Test
+    void should_move_1_2_S_when_executeCommands_given_2_2_S_RML() {
+        // given
+        marsRover = new MarsRover(2, 2, Constant.S);
+        // when
+        marsRover.executeCommands("RML");
+        // then
+        assertEquals(1, marsRover.getxIndex());
+        assertEquals(2, marsRover.getyIndex());
+        assertEquals(Constant.S, marsRover.getDirection());
+    }
 }
