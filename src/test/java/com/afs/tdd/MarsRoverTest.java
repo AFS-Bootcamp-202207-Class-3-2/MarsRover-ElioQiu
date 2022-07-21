@@ -113,4 +113,52 @@ class MarsRoverTest {
         assertEquals(1, marsRover.getyIndex());
         assertEquals(Constant.E, marsRover.getDirection());
     }
+
+    @Test
+    void should_move_2_0_S_when_executeCommands_given_2_2_N_LLMM() {
+        // given
+        marsRover = new MarsRover(2, 2, Constant.N);
+        // when
+        marsRover.executeCommands("LLMM");
+        // then
+        assertEquals(2, marsRover.getxIndex());
+        assertEquals(0, marsRover.getyIndex());
+        assertEquals(Constant.S, marsRover.getDirection());
+    }
+
+    @Test
+    void should_move_2_4_S_when_executeCommands_given_2_2_N_MMRR() {
+        // given
+        marsRover = new MarsRover(2, 2, Constant.N);
+        // when
+        marsRover.executeCommands("MMRR");
+        // then
+        assertEquals(2, marsRover.getxIndex());
+        assertEquals(4, marsRover.getyIndex());
+        assertEquals(Constant.S, marsRover.getDirection());
+    }
+
+    @Test
+    void should_move_2_2_N_when_executeCommands_given_2_2_N_LRLR() {
+        // given
+        marsRover = new MarsRover(2, 2, Constant.N);
+        // when
+        marsRover.executeCommands("LRLR");
+        // then
+        assertEquals(2, marsRover.getxIndex());
+        assertEquals(2, marsRover.getyIndex());
+        assertEquals(Constant.N, marsRover.getDirection());
+    }
+
+    @Test
+    void should_move_1_2_W_when_executeCommands_given_2_2_N_LMLR() {
+        // given
+        marsRover = new MarsRover(2, 2, Constant.N);
+        // when
+        marsRover.executeCommands("LMLR");
+        // then
+        assertEquals(1, marsRover.getxIndex());
+        assertEquals(2, marsRover.getyIndex());
+        assertEquals(Constant.W, marsRover.getDirection());
+    }
 }
