@@ -5,24 +5,10 @@ public class MarsRover {
     private int yIndex;
     private String direction;
 
-
-
     public MarsRover(int xIndex, int yIndex, String direction) {
         this.xIndex = xIndex;
         this.yIndex = yIndex;
         this.direction = direction;
-    }
-
-    public int getxIndex() {
-        return xIndex;
-    }
-
-    public int getyIndex() {
-        return yIndex;
-    }
-
-    public String getDirection() {
-        return direction;
     }
 
     public void executeCommands(String commands) {
@@ -34,29 +20,34 @@ public class MarsRover {
 
     private void executeCommand(String command) {
         if (Constant.M.equals(command)) {
-            move();
+            new MoveAction(this).action();
         } else if (Constant.L.equals(command)) {
-            turnLeft();
+            new LeftAction(this).action();
         } else if (Constant.R.equals(command)) {
-            turnRight();
+            new RightAction(this).action();
         }
     }
 
-    private void turnRight() {
-        if (Constant.W.equals(direction)) {
-            this.direction = Constant.N;
-        }
+    public void setxIndex(int xIndex) {
+        this.xIndex = xIndex;
     }
 
-    private void turnLeft() {
-        if (Constant.E.equals(direction)) {
-            this.direction = Constant.N;
-        }
+    public void setyIndex(int yIndex) {
+        this.yIndex = yIndex;
     }
 
-    private void move() {
-        if (Constant.N.equals(direction)) {
-            this.yIndex++;
-        }
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+    public int getxIndex() {
+        return xIndex;
+    }
+
+    public int getyIndex() {
+        return yIndex;
+    }
+
+    public String getDirection() {
+        return direction;
     }
 }
