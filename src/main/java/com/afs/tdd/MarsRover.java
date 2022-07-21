@@ -26,6 +26,21 @@ public class MarsRover {
     }
 
     public void executeCommands(String commands) {
+        int len = commands.length();
+        for (int index = 0; index < len; index++) {
+            executeCommand(String.valueOf(commands.charAt(index)));
+        }
+    }
 
+    private void executeCommand(String command) {
+        if (Constant.M.equals(command)) {
+            move();
+        }
+    }
+
+    private void move() {
+        if (Constant.N.equals(direction)) {
+            this.yIndex++;
+        }
     }
 }

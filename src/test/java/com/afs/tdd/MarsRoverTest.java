@@ -14,7 +14,7 @@ class MarsRoverTest {
         marsRover.executeCommands("M");
         // then
         assertEquals(2, marsRover.getxIndex());
-        assertEquals(3, marsRover.getxIndex());
-        assertEquals(Constant.N, marsRover.getxIndex());
+        assertEquals(3, marsRover.getyIndex());
+        assertEquals(Constant.N, marsRover.getDirection());
     }
 }
