@@ -11,14 +11,11 @@ public class LeftAction extends Action{
     void action() {
         if (Constant.N.equals(marsRover.getDirection())) {
             marsRover.setDirection(Constant.W);
-        }
-        if (Constant.W.equals(marsRover.getDirection())) {
+        } else if (Constant.W.equals(marsRover.getDirection())) {
             marsRover.setDirection(Constant.S);
-        }
-        if (Constant.S.equals(marsRover.getDirection())) {
+        } else if (Constant.S.equals(marsRover.getDirection())) {
             marsRover.setDirection(Constant.E);
-        }
-        if (Constant.E.equals(marsRover.getDirection())) {
+        } else if (Constant.E.equals(marsRover.getDirection())) {
             marsRover.setDirection(Constant.N);
         }
     }
