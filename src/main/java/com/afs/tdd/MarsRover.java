@@ -35,8 +35,16 @@ public class MarsRover {
     private void executeCommand(String command) {
         if (Constant.M.equals(command)) {
             move();
-        } else {
+        } else if (Constant.L.equals(command)) {
             turnLeft();
+        } else if (Constant.R.equals(command)) {
+            turnRight();
+        }
+    }
+
+    private void turnRight() {
+        if (Constant.W.equals(direction)) {
+            this.direction = Constant.N;
         }
     }
 
