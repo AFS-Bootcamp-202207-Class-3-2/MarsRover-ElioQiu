@@ -29,4 +29,16 @@ class MarsRoverTest {
         assertEquals(2, marsRover.getyIndex());
         assertEquals(Constant.N, marsRover.getDirection());
     }
+
+    @Test
+    void should_move_2_2_N_when_executeCommands_given_2_2_W_R() {
+        // given
+        marsRover = new MarsRover(2, 2, Constant.W);
+        // when
+        marsRover.executeCommands(Constant.R);
+        // then
+        assertEquals(2, marsRover.getxIndex());
+        assertEquals(2, marsRover.getyIndex());
+        assertEquals(Constant.N, marsRover.getDirection());
+    }
 }
