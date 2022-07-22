@@ -9,14 +9,19 @@ public class LeftAction extends Action{
 
     @Override
     void action() {
-        if (Constant.N.equals(marsRover.getDirection())) {
-            marsRover.setDirection(Constant.W);
-        } else if (Constant.W.equals(marsRover.getDirection())) {
-            marsRover.setDirection(Constant.S);
-        } else if (Constant.S.equals(marsRover.getDirection())) {
-            marsRover.setDirection(Constant.E);
-        } else if (Constant.E.equals(marsRover.getDirection())) {
-            marsRover.setDirection(Constant.N);
+        switch (marsRover.getDirection()) {
+            case Constant.N:
+                marsRover.setDirection(Constant.W);
+                break;
+            case Constant.W:
+                marsRover.setDirection(Constant.S);
+                break;
+            case Constant.S:
+                marsRover.setDirection(Constant.E);
+                break;
+            case Constant.E:
+                marsRover.setDirection(Constant.N);
+                break;
         }
     }
 }

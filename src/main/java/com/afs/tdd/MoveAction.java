@@ -9,14 +9,19 @@ public class MoveAction extends Action{
 
     @Override
     void action() {
-        if (Constant.N.equals(marsRover.getDirection())) {
-            marsRover.setyIndex(marsRover.getyIndex()+1);
-        } else if (Constant.W.equals(marsRover.getDirection())) {
-            marsRover.setxIndex(marsRover.getxIndex()-1);
-        } else if (Constant.S.equals(marsRover.getDirection())) {
-            marsRover.setyIndex(marsRover.getyIndex()-1);
-        } else if (Constant.E.equals(marsRover.getDirection())) {
-            marsRover.setxIndex(marsRover.getxIndex()+1);
+        switch (marsRover.getDirection()) {
+            case Constant.N:
+                marsRover.setyIndex(marsRover.getyIndex()+1);
+                break;
+            case Constant.W:
+                marsRover.setxIndex(marsRover.getxIndex()-1);
+                break;
+            case Constant.S:
+                marsRover.setyIndex(marsRover.getyIndex()-1);
+                break;
+            case Constant.E:
+                marsRover.setxIndex(marsRover.getxIndex()+1);
+                break;
         }
     }
 

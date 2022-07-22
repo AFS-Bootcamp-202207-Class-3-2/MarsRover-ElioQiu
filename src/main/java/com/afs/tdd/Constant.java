@@ -1,11 +1,11 @@
 package com.afs.tdd;
 
 public class Constant {
-    public static String N = "N";
-    public static String E = "E";
-    public static String S = "S";
-    public static String W = "W";
-    public static String M = "M";
-    public static String L = "L";
-    public static String R = "R";
+    public static final String N = "N";
+    public static final String E = "E";
+    public static final String S = "S";
+    public static final String W = "W";
+    public static final String M = "M";
+    public static final String L = "L";
+    public static final String R = "R";
 }
