@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.Arrays;
+
 public class MarsRover {
     private int xIndex;
     private int yIndex;
@@ -12,10 +14,7 @@ public class MarsRover {
     }
 
     public void executeCommands(String commands) {
-        int len = commands.length();
-        for (int index = 0; index < len; index++) {
-            executeCommand(String.valueOf(commands.charAt(index)));
-        }
+        Arrays.stream(commands.split("")).forEach(this::executeCommand);
     }
 
     private void executeCommand(String command) {
@@ -39,6 +38,7 @@ public class MarsRover {
     public void setDirection(String direction) {
         this.direction = direction;
     }
+
     public int getxIndex() {
         return xIndex;
     }
